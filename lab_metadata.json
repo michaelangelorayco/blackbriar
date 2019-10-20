@@ -1,0 +1,56 @@
+{
+    "lab1": {
+        "description": "iam group and user",
+        "arn": {
+            "iam_group": "",
+            "iam_policy": [],
+            "iam_user":
+        },
+        "tag": {
+
+        }
+    },
+
+    "lab2": {
+        "description": "billing alert",
+        "arn": {
+            "billing_alert": "",
+            "sns_topic": ""
+        },
+        "tag": {
+
+        }
+    },
+
+    "lab3": {
+        "description": "static web site hosting",
+        "arn": {
+            "s3_bucket": ""
+        },
+        "tag": {
+
+        }
+    },
+
+    "lab4": {
+        "description": "",
+        "arn": {
+
+        },
+        "tag": {
+
+        }
+    },
+
+    "lab5": {
+        "description": "",
+        "arn": {
+
+        },
+        "tag": {
+            
+        }
+    }
+
+
+}

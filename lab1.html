@@ -1,0 +1,198 @@
+<html>
+<strong>Notes:</strong>
+<br>
+You will be given a unique cadet id, and you will be required to append your cadet id in every resource that you will create for this lab activity.
+<br>
+For the instructions below, we use A0 as an <strong>example</strong> cadet id, your cadet id will be different, be very mindful of this.
+<br><br>
+Good luck!
+
+&nbsp;
+
+&nbsp;
+<br><br>
+<strong>A. Create an IAM group.</strong>
+<br><br>
+A1. From the AWS management console, navigate to IAM.
+<br>
+<img class="alignnone wp-image-6015" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-18-at-9.35.36-PM.png" alt="" width="910" height="535" />
+<br><br>
+&nbsp;
+
+You will be redirected to the IAM Dashboard:
+<br>
+<img class="alignnone size-full wp-image-6016" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-18-at-9.39.22-PM.png" alt="" width="1440" height="590" />
+<br><br>
+A2. Let us create an IAM group by clicking on Groups, then Create New Group.
+<br>
+<img class="alignnone size-full wp-image-6094" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.02.48-PM.png" alt="" width="777" height="276" />
+<br>
+Set the Group Name to consultant followed by the cadet id assigned to you separated by a dash, then click next.
+
+&nbsp;
+
+&nbsp;
+<br><br>
+A3. Attach the policy "ReadOnlyAccess" and "IAMUserChangePassword".
+<br>
+<img class="alignnone size-full wp-image-6018" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-18-at-9.48.08-PM.png" alt="" width="1440" height="814" />
+<br>
+Select ReadOnlyAccess.
+<br><br>
+&nbsp;
+
+<img class="alignnone size-full wp-image-6028" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-19-at-9.12.53-AM-1.png" alt="" width="1440" height="815" />
+<br>
+Select IAMUserChangePassword then click next step.
+
+&nbsp;
+
+&nbsp;
+<br><br>
+A4. Create the group.
+<br>
+<img class="alignnone size-full wp-image-6096" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.03.48-PM.png" alt="" width="1422" height="806" />
+<br>
+Click on create group, you now have created an IAM Group.
+<br>
+&nbsp;
+<br><br>
+A5. View the details of the IAM Group and take note of the Group ARN.
+<br>
+<img class="alignnone size-full wp-image-6095" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.04.02-PM.png" alt="" width="939" height="572" />
+<br>
+&nbsp;
+
+&nbsp;
+<br><br>
+<strong>B. Create an IAM user and attach it to the IAM group we have created earlier.</strong>
+<br>
+&nbsp;
+<br><br>
+B1. On the IAM dashboard, click on Users then Add User.
+<br>
+<img class="alignnone size-full wp-image-6101" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.06.56-PM.png" alt="" width="1204" height="786" />
+<br>
+Set the User name to john followed by your cadet id separated by a dash, make sure that this user will have console access only. Click next.
+<br><br>
+&nbsp;
+
+B2. Attach the IAM user to the IAM group we have created earlier.
+<br>
+<img class="alignnone size-full wp-image-6100" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.07.11-PM.png" alt="" width="1213" height="780" />
+<br>
+Click next.
+
+&nbsp;
+<br><br>
+B3. Set your cadet_id and lab tags.
+<br>
+<img class="alignnone size-full wp-image-6099" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.07.44-PM.png" alt="" width="1211" height="780" />
+<br>
+Add two tags with the key of cadetid and lab.
+<br>
+Set the cadet_id value with your cadet id.
+<br>
+Set the lab value to 1, then click next.
+<br>
+&nbsp;
+<br><br>
+B4. Review the details then click on create user.
+<br>
+<img class="alignnone size-full wp-image-6098" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.07.57-PM.png" alt="" width="1206" height="783" />
+<br>
+&nbsp;
+
+&nbsp;
+<br><br>
+B5. Download the credentials.
+<br>
+<img class="alignnone size-full wp-image-6097" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.08.18-PM.png" alt="" width="1205" height="791" />
+<br>
+Click on Download .csv then click on close.
+
+&nbsp;
+<br><br>
+B6. View the IAM User details and take note of the User ARN.
+<br>
+<img class="alignnone size-full wp-image-6102" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.12.20-PM.png" alt="" width="1433" height="644" />
+
+&nbsp;
+
+&nbsp;
+<br><br>
+<strong>C. Login using the IAM user we have created and attempt to provision an EC2 server.</strong>
+<br><br>
+C1. Using a text editor, open the csv file which we have downloaded earlier, it contains the sign-in URL and the credentials of the IAM user similar to the image below.
+<br>
+<img class="alignnone size-full wp-image-6103" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.13.37-PM.png" alt="" width="724" height="76" />
+<br>
+Copy the console login URL on a different web browser, then supply the username and password. The alias will be automatically filled for you and expect it will not be the same as the one in the image below.
+<br>
+<img class="alignnone size-full wp-image-6104" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.14.50-PM.png" alt="" width="991" height="686" />
+<br>
+Click sign in.
+<br>
+&nbsp;
+
+&nbsp;
+<br><br>
+C2. Change password.
+<br>
+You will be required to create a new password on the initial login of the new IAM User account.
+<br>
+<img class="alignnone size-full wp-image-6105" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.15.30-PM.png" alt="" width="953" height="536" />After supplying the new password, click confirm password change, you are now logged-in with ReadOnlyAccess.
+<br>
+<img class="alignnone size-full wp-image-6106" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.17.25-PM.png" alt="" width="1286" height="799" />
+<br>
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+<br><br>
+C3. Navigate to EC2 dashboard.
+<br><br>
+<img class="alignnone size-full wp-image-6041" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-19-at-9.56.23-AM.png" alt="" width="969" height="535" />
+<br>
+&nbsp;
+<br><br>
+C4. Click on launch instance.
+<br>
+<img class="alignnone size-full wp-image-6107" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.19.27-PM.png" alt="" width="1209" height="552" />
+<br>
+&nbsp;
+<br><br>
+C5. Select the Amazon Linux 2 AMI.
+<br><br>
+<img class="alignnone size-full wp-image-6108" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.21.47-PM.png" alt="" width="1413" height="372" />
+
+&nbsp;
+<br><br>
+C6. On the Choose an Instance Type screen, make sure that t2.micro is selected, then click on Review and Launch.
+<br>
+<img class="alignnone size-full wp-image-6044" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-19-at-10.01.42-AM.png" alt="" width="1435" height="755" />
+<br>
+&nbsp;
+<br><br>
+C7. Click Launch.
+<br>
+<img class="alignnone size-full wp-image-6045" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-19-at-10.02.29-AM.png" alt="" width="1440" height="769" />
+<br>
+&nbsp;
+<br><br>
+C8. You will be asked for a key pair, but for this lab, it is not necessary. Select proceed without key pair and acknowledge it.
+<br>
+<img class="alignnone size-full wp-image-6046" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-19-at-10.03.31-AM.png" alt="" width="707" height="382" />
+<br>
+Click on Launch Instances.
+<br>
+&nbsp;
+<br>
+It will show that the account you are using is not authorized to perform the operation due to the ReadOnlyAccess policy we have assigned to the IAM group.
+<br>
+<img class="alignnone size-full wp-image-6109" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.23.07-PM.png" alt="" width="1440" height="352" />
+<br>
+&nbsp;
+
+</html>

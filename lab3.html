@@ -1,0 +1,132 @@
+<html>
+<strong>Notes:</strong>
+<br><br>
+You will be given a unique cadet id, and you will be required to append your cadet id in every resource that you will create for this lab activity.
+<br><br>
+For the instructions below, we use A0 as an <strong>example</strong> cadet id, your cadet id will be different, be very mindful of this.
+<br><br>
+
+Good luck!
+
+&nbsp;
+<br>
+1. On the AWS management console, please check if you are in the Singapore region, if not, please switch your region to Singapore.
+<br>
+<img class="alignnone size-full wp-image-6128" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.24.57-PM.png" alt="" width="1314" height="638" />
+
+&nbsp;
+<br><br><br>
+2. Navigate to S3.
+<br>
+<img class="alignnone size-full wp-image-6129" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.26.39-PM.png" alt="" width="838" height="520" />
+<br>
+&nbsp;
+<br><br><br>
+4. Let's create a bucket by clicking on create bucket.
+<br>
+<img class="alignnone size-full wp-image-6130" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.28.18-PM.png" alt="" width="792" height="352" />
+<br>
+&nbsp;
+<br><br><br>
+5. Name your bucket ac2e-demo followed by your cadet id separated by a dash, this time you need to input your cadet id using lower case characters.
+<br><br>
+Also, make sure that the selected region is Asia Pacific (Singapore)
+<br>
+<img class="alignnone size-full wp-image-6131" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.31.33-PM.png" alt="" width="1100" height="724" />
+<br>
+Click next.
+
+&nbsp;
+<br><br><br>
+6. Set the tags, for the lab value input the number 3, for the cadetid value use the cadet id assigned to you.
+<br>
+<img class="alignnone size-full wp-image-6132" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.40.05-PM.png" alt="" width="1099" height="734" />
+<br>
+&nbsp;
+<br><br><br>
+7. Since we will host a static website on the bucket, we need to make it public, you can do that by <strong>unchecking</strong> the block all public access checkbox.
+<br>
+&nbsp;
+
+<img class="alignnone size-full wp-image-6133" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.47.28-PM.png" alt="" width="1099" height="730" />
+<br>
+Click next.
+<br>
+&nbsp;
+<br><br><br>
+8. Click on create bucket.
+<br>
+<img class="alignnone size-full wp-image-6134" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.49.28-PM.png" alt="" width="1100" height="730" />
+<br>
+&nbsp;
+<br><br><br>
+9. Download and unzip this file: <a href="https:https://apper-demo.s3-ap-southeast-1.amazonaws.com/site/static_site.zip">https:https://apper-demo.s3-ap-southeast-1.amazonaws.com/site/static_site.zip</a>
+<br>
+&nbsp;
+<br><br><br>
+10. Upload the unziped files by dragging it to your S3 bucket.
+<br>
+<img class="alignnone size-full wp-image-6135" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.34.40-PM.png" alt="" width="1292" height="668" />
+<br>
+&nbsp;
+<br><br><br>
+11. After dragging the files to your bucket, your screen should look similar to the image below.
+<br>
+<img class="alignnone size-full wp-image-6136" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.36.00-PM.png" alt="" width="1106" height="700" />
+<br>
+Then click next.
+<br>
+&nbsp;
+<br><br><br>
+12. On the manage public permission, select Grant public read access to this object(s).
+<br>
+<img class="alignnone size-full wp-image-6137" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.37.57-PM.png" alt="" width="1107" height="695" />
+<br>
+Click next.
+<br>
+&nbsp;
+<br><br><br>
+13. For the storage class just select standard.
+<br>
+<img class="alignnone size-full wp-image-6138" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.39.32-PM.png" alt="" width="1100" height="696" />
+<br>
+Click next.
+<br>
+&nbsp;
+<br><br><br>
+14. Click on upload.
+<br>
+<img class="alignnone size-full wp-image-6139" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.40.24-PM.png" alt="" width="1101" height="698" />
+<br>
+&nbsp;
+<br><br><br>
+15. After uploading the objects, The S3 bucket will contain the following objects:
+<br>
+<img class="alignnone size-full wp-image-6140" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.41.08-PM.png" alt="" width="1303" height="617" />
+<br>
+&nbsp;
+<br><br><br>
+16. Let's now configure static website hosting by navigating to the properties tab, click on the static website hosting box, then select "use this bucket to host a website". In the index document, enter index.html.
+<br>
+&nbsp;
+<br>
+<img class="alignnone size-full wp-image-6141" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.45.47-PM.png" alt="" width="1213" height="719" />
+<br>
+Take note of the endpoint, then click save.
+<br>
+&nbsp;
+<br><br><br>
+17. Open another tab on your web browser and resolve the endpoint, it should display the static website similar to the image below.
+<br>
+&nbsp;
+<br>
+<img class="alignnone size-full wp-image-6142" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-3.51.25-PM.png" alt="" width="854" height="553" />
+<br>
+&nbsp;
+<br><br>
+You have successfully hosted a static website in S3!
+
+&nbsp;
+
+&nbsp;
+</html>

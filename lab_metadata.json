@@ -7,6 +7,16 @@
             "iam_user":
         },
         "tag": {
+            "iam_user": {
+                "cadetid": "",
+                "lab": ""
+            },
+            "iam_group": {
+                "cadetid": "",
+                "lab": ""
+            }
+        },
+        "policy": {
 
         }
     },
@@ -14,12 +24,20 @@
     "lab2": {
         "description": "billing alert",
         "arn": {
-            "billing_alert": "",
+            "billing_alarm": "",
             "sns_topic": ""
         },
         "tag": {
+            "s3_bucket": {
+                "cadetid": "",
+                "lab": ""
+            }
+
+        },
+        "policy": {
 
         }
+
     },
 
     "lab3": {
@@ -28,18 +46,32 @@
             "s3_bucket": ""
         },
         "tag": {
+            "s3_bucket": {
+                "cadetid": "",
+                "lab":
+            },
+        "endpoint": "this will contain the website url hosted in s3."
 
         }
     },
 
     "lab4": {
-        "description": "",
+        "description": "Deploy a highly available web app using beanstalk",
         "arn": {
 
         },
         "tag": {
+            "beanstalk_application": {
+                "cadetid": "",
+                "lab": ""
+            },
+            "beanstalk_application_code": {
+                "cadetid": "",
+                "lab": ""
+            }
 
-        }
+        },
+        "endpoint": "this will contain beanstalk url"
     },
 
     "lab5": {
@@ -48,9 +80,8 @@
 
         },
         "tag": {
-            
+
         }
     }
-
 
 }

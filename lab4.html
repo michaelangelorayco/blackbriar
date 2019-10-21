@@ -1,0 +1,139 @@
+<html>
+<strong>Notes:</strong>
+<br><br>
+You will be given a unique cadet id, and you will be required to append your cadet id in every resource that you will create for this lab activity.
+<br><br>
+For the instructions below, we use A0 as an <strong>example</strong> cadet id, your cadet id will be different, be very mindful of this.
+<br><br>
+Good luck!
+
+&nbsp;
+<br><br><br>
+1. On the AWS management console, please check if you are in the Singapore region, if not, please switch your region to Singapore.
+<br>
+<img class="alignnone size-full wp-image-6128" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-2.24.57-PM.png" alt="" width="1314" height="638" />
+<br>
+&nbsp;
+<br><br><br>
+2. On the AWS management console, navigate to Elastic Beanstalk.
+<br>
+<img class="alignnone size-full wp-image-6147" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-6.45.42-PM.png" alt="" width="826" height="462" />
+<br>
+&nbsp;
+<br><br><br>
+3. On the top right of the page, click on create new application.
+<br>
+<img class="alignnone size-full wp-image-6148" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.08.08-PM.png" alt="" width="1440" height="413" />
+<br>
+&nbsp;
+<br><br><br>
+4. Name your application webapp followed by your cadet id separated by a dash, then create the tag cadetid and lab.
+<br><br>
+Set the cadetid value with your assigned cadet id, and just input 4 for the lab value.
+<br>
+<img class="alignnone size-full wp-image-6149" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.10.04-PM.png" alt="" width="564" height="671" />
+<br>
+Click Create.
+<br>
+&nbsp;
+<br><br><br>
+5. At the top of the web page, find the application you have created and click on create environment.
+<br>
+<img class="alignnone size-full wp-image-6150" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.14.22-PM.png" alt="" width="1439" height="412" />
+<br>
+&nbsp;
+<br><br><br>
+6. Select web server environment.
+<br>
+<img class="alignnone size-full wp-image-6151" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.16.10-PM.png" alt="" width="1060" height="492" />
+<br>
+&nbsp;
+<br><br><br>
+7. On the base configuration, select PHP for the platform.
+<br>
+<img class="alignnone size-full wp-image-6152" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.18.34-PM.png" alt="" width="926" height="804" />
+<br>
+&nbsp;
+<br>
+On the application code, select upload your code then click the upload button.
+<br>
+&nbsp;
+<br><br><br>
+8. The source code origin will be Public S3 URL. use this URL: <a href="https:https://apper-demo.s3-ap-southeast-1.amazonaws.com/beanstalk-demo/apper.ph-lab4-php-app-11242018.zip">https:https://apper-demo.s3-ap-southeast-1.amazonaws.com/beanstalk-demo/apper.ph-lab4-php-app-11242018.zip</a>
+<br>
+<img class="alignnone size-full wp-image-6162" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.55.47-PM.png" alt="" width="725" height="809" />
+<br>
+Click upload.
+<br>
+&nbsp;
+<br><br><br>
+9. Click on create configure more option.
+<br>
+<img class="alignnone size-full wp-image-6155" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.28.50-PM.png" alt="" width="909" height="780" />
+<br><br><br>
+10. On the configuration preset, select custom configuration.
+<br>
+<img class="alignnone size-full wp-image-6156" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.31.56-PM.png" alt="" width="1075" height="254" /> <img class="alignnone size-full wp-image-6157" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.32.40-PM.png" alt="" width="1413" height="812" />
+<br>
+Then click modify on capacity.
+<br>
+&nbsp;
+<br><br><br>
+11. Set the minimum instance value to 2.
+<br>
+<img class="alignnone size-full wp-image-6160" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.42.14-PM.png" alt="" width="900" height="518" />
+<br>
+&nbsp;
+<br>
+Scroll down.
+<br><br><br>
+12. For the scaling triggers, use the same exact values that are defined on the image below:
+<br>
+<img class="alignnone size-full wp-image-6161" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.43.35-PM.png" alt="" width="910" height="649" />Click save, then create environment.
+<br>
+&nbsp;
+<br><br><br>
+13. Wait for it to provision the servers.
+<br>
+<img class="alignnone size-full wp-image-6163" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-7.59.35-PM.png" alt="" width="1081" height="680" />
+<br><br>
+Once the provisioning is finished you will be redirected to this page:
+<br>
+<img class="alignnone size-full wp-image-6164" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-8.01.24-PM.png" alt="" width="1433" height="717" />
+<br>
+<strong>Take note of the environment URL.</strong>
+<br>
+&nbsp;
+<br><br><br>
+14. Navigate to EC2 console.
+<br>
+<img class="alignnone size-full wp-image-6165" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-8.04.24-PM.png" alt="" width="826" height="335" />
+<br>
+&nbsp;
+<br><br><br>
+15. Find the instances that were created by elastic beanstalk, look for the one which includes your cadet id in the name.
+<br>
+<img class="alignnone size-full wp-image-6166" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-8.06.18-PM.png" alt="" width="1440" height="285" />
+<br>
+&nbsp;
+<br><br><br>
+16. Select any of your instances, then terminate it by clicking on actions.
+<br>
+<img class="alignnone size-full wp-image-6167" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-8.10.40-PM.png" alt="" width="999" height="371" />
+<br>
+&nbsp;
+<br><br><br>
+17. Click on Yes, Terminate
+<br>
+<img class="alignnone size-full wp-image-6168" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-8.11.34-PM.png" alt="" width="768" height="336" />
+<br>
+Your instance will be terminated, wait for a few minutes.
+<br>
+&nbsp;
+<br><br><br>
+18. After your instance has been terminated you'll see that a new server will be created automatically, in replacement of the server you have terminated.
+<br>
+<img class="alignnone size-full wp-image-6169" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-21-at-8.15.05-PM.png" alt="" width="1230" height="275" />
+<br>
+&nbsp;
+</html>

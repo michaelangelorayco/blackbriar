@@ -1,0 +1,103 @@
+<html>
+<strong>Notes:</strong>
+<br><br>
+You will be given a unique cadet id, and you will be required to append your cadet id in every resource that you will create for this lab activity.
+<br><br>
+For the instructions below, we use A0 as an <strong>example</strong> cadet id, your cadet id will be different, be very mindful of this.
+<br><br>
+Good luck!
+
+&nbsp;
+<br><br><br>
+1. On the AWS management console, switch to the North Virginia region.
+<br>
+<img class="alignnone size-full wp-image-6111" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.47.36-PM.png" alt="" width="1255" height="634" />
+<br>
+&nbsp;
+<br>
+2. Navigate to Cloudwatch.
+<br>
+<img class="alignnone size-full wp-image-6050" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-19-at-10.13.34-AM.png" alt="" width="968" height="559" />
+<br><br>
+You will be redirected to the Cloudwatch dashboard.
+
+&nbsp;
+
+&nbsp;
+<br><br><br>
+3. On the left side of the Cloudwatch dashboard, click on billing.
+<br>
+<img class="alignnone size-full wp-image-6112" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.48.44-PM.png" alt="" width="821" height="721" />
+<br>
+&nbsp;
+
+&nbsp;
+<br><br><br>
+4. Click on the create alarm button that is in the middle of the page, do not click the one on the upper right.
+<br>
+<img class="alignnone size-full wp-image-6113" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.49.53-PM.png" alt="" width="1402" height="466" />
+<br>
+&nbsp;
+<br><br><br>
+5. Scroll down to the bottom of the page and set the threshold value to 1.
+<br>
+<img class="alignnone size-full wp-image-6114" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-3.59.36-PM.png" alt="" width="803" height="726" />
+<br><br>
+Click next.
+
+&nbsp;
+<br><br><br>
+6. On the configure actions page, make sure to select create new topic, then use billingalarm followed by your cadet id separated by dash as the topic name.
+<br><br>
+Also, supply your own email address, and make sure it's a valid email address.
+<br><br>
+<img class="alignnone size-full wp-image-6123" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.30.38-PM.png" alt="" width="1027" height="726" />
+<br><br>
+After setting up the topic name and email address, click on create topic, then click next.
+
+&nbsp;
+
+&nbsp;
+<br><br><br>
+7. Enter "Dollar Alarm" followed by your cadet id separated by a dash as the name.
+
+<img class="alignnone size-full wp-image-6115" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.09.07-PM.png" alt="" width="1037" height="498" />
+<br><br>
+Click next.
+
+&nbsp;
+<br><br><br>
+8. Scroll down to the bottom of the page then click create alarm, you have successfully created a billing alarm.
+<br>
+<img class="alignnone size-full wp-image-6118" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.14.00-PM.png" alt="" width="1401" height="467" />
+<br>
+&nbsp;
+<br><br><br>
+9. Click on the billing alert you have created, then take note of the ARN.
+<br>
+<img class="alignnone size-full wp-image-6119" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.18.35-PM.png" alt="" width="1368" height="550" />
+<br><br><br>
+10. Navigate to SNS dashboard.
+<br>
+<img class="alignnone size-full wp-image-6120" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.20.35-PM.png" alt="" width="1086" height="261" />
+<br>
+&nbsp;
+<br><br><br>
+11. On the left side of the SNS dashboard, click on topics. Then take note of the SNS topic ARN you have created earlier.
+<br>
+<img class="alignnone size-full wp-image-6122" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.23.31-PM.png" alt="" width="1382" height="382" />
+
+&nbsp;
+
+&nbsp;
+<br><br><br>
+12. Check your email, you will receive an email from AWS SNS to confirm your subscription to the SNS topic we have created earlier.
+<br>
+<img class="alignnone size-full wp-image-6116" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.11.09-PM.png" alt="" width="928" height="297" />
+
+&nbsp;
+<br><br>
+Click confirm subscription.
+<br><br>
+<img class="alignnone size-full wp-image-6117" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-20-at-4.11.56-PM.png" alt="" width="544" height="276" />
+</html>

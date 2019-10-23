@@ -4,7 +4,7 @@
         "arn": {
             "iam_group": "",
             "iam_policy": [],
-            "iam_user":
+            "iam_user": ""
         },
         "tag": {
             "iam_user": {
@@ -48,18 +48,15 @@
         "tag": {
             "s3_bucket": {
                 "cadetid": "",
-                "lab":
-            },
+                "lab": ""
+            }
+        },
         "endpoint": "this will contain the website url hosted in s3."
 
-        }
     },
 
     "lab4": {
         "description": "Deploy a highly available web app using beanstalk",
-        "arn": {
-
-        },
         "tag": {
             "beanstalk_application": {
                 "cadetid": "",
@@ -75,13 +72,9 @@
     },
 
     "lab5": {
-        "description": "",
+        "description": "Nested CloudFormation Stack",
         "arn": {
-
-        },
-        "tag": {
-
+            "cloudformation_stack": ""
         }
     }
-
 }

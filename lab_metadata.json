@@ -75,6 +75,21 @@
         "description": "Nested CloudFormation Stack",
         "arn": {
             "cloudformation_stack": ""
-        }
+        },
+    },
+    "billing_alarm_alternative": {
+        "description": "Create a cloudwatch dashboard",
+        "dashboard_name": ""
     }
 }
+
+
+
+
+
+
+
+
+
+
+

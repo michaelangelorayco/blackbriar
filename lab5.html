@@ -1,0 +1,530 @@
+<html>
+<h3><strong>Notes:</strong></h3>
+<br>
+This will be a group activity, there are 5 CloudFormation templates and you can assign one to each member of the group.
+<br><br>
+Here are the links for the CloudFormation templates:
+<br><br>
+A. IAM: <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/IAM_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/IAM_CFN.json</a>
+<br><br>
+B. EC2: <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/EC2_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/EC2_CFN.json</a>
+<br><br>
+C. S3: <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/S3_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/S3_CFN.json</a>
+<br><br>
+D. DynamoDB: <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/DYNAMODB_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/DYNAMODB_CFN.json</a>
+<br><br>
+E. Nested Stack: <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/NESTED_STACK.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/NESTED_STACK.json</a>
+<br><br><br>
+
+<h3><strong>Objective:</strong></h3>
+
+This activity will require you to modify the CloudFormation template to add output. The nested stack will be dependent on the IAM, EC2, S3 and DynamoDB stack. If you are assigned on the Nested Stack, you have to wait for the IAM, EC2, S3 and DynamoDB stack to finish.
+<br><br>
+Also, your team needs to create a public S3 bucket to store the updated IAM, EC2, S3, DynamoDB and Nested Stack templates, make sure to make the objects public as well so that CloudFormation will be able to access it.
+<br><br>
+Name your S3 bucket lab5 followed by your team id separated by a dash.
+<br><br>
+<img class="alignnone size-full wp-image-6198" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.35.34-AM.png" alt="" width="1097" height="271" />
+
+
+<br><br>
+Below are the specific guides for each stack:
+<br><br>
+<h2><strong>A. IAM Stack.</strong></h2>
+<br>
+<strong>A1.</strong> Make sure you are in the Singapore region.
+<br><br><br>
+<strong>A2.</strong> Navigate to CloudFormation console.
+<br><br><br>
+<strong>A3.</strong> Click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6186" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.47.47-AM.png" alt="" width="1403" height="223" />
+
+
+<br><br><br><br><br>
+<strong>A4.</strong> Use this URL <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/IAM_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/IAM_CFN.json</a> as the template URL.
+<br><br>
+<img class="alignnone size-full wp-image-6187" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.51.57-AM.png" alt="" width="1329" height="716" />
+<br><br>
+Click next.
+<br><br><br><br><br>
+<strong>A5.</strong> Set the name IAM-STACK.
+<br><br>
+<img class="alignnone size-full wp-image-6188" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.53.28-AM.png" alt="" width="1336" height="552" />
+<br><br>
+Click next.
+<br><br><br><br><br>
+<strong>A6.</strong> For this lab we don't need to configure the tags, so just leave it blank.
+<br><br>
+<img class="alignnone size-full wp-image-6189" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.57.17-AM.png" alt="" width="1338" height="744" />
+
+Scroll down and click next.
+
+
+<br><br><br><br><br>
+<strong>A7.</strong> Acknowledge that it will create resources and click create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6190" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.58.58-AM.png" alt="" width="1024" height="258" />
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A8.</strong> Once the stack creation is complete, click on the outputs tab and you will see the AccessKey and SecretKey output.
+<br><br>
+<img class="alignnone size-full wp-image-6191" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.03.55-AM.png" alt="" width="1431" height="495" />
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A9.</strong> Here comes the work, you need to output the username of the IAM User, you can do this by opening the IAM CloudFormation template URL in your web browser, copy the text and then paste it into a file in your local machine and save it with a .json file extension.
+<br><br>
+Then you need to modify the output section of the CloudFormation template.
+<br><br>
+After you have made the modification, you can test it by clicking on update which is located at the top of the IAM-STACK you have created.
+<br><br>
+<img class="alignnone size-full wp-image-6192" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.09.03-AM.png" alt="" width="1176" height="203" />
+
+&nbsp;
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A10.</strong> In the prerequisite select "replace current template", then select "upload a template file" for the template source, click choose file and upload the CloudFormation template from your local machine.
+
+&nbsp;
+<br><br>
+<img class="alignnone size-full wp-image-6193" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.15.43-AM.png" alt="" width="1294" height="719" />
+<br><br>
+Click next.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A11.</strong> Leave the parameters as is.
+<br><br>
+<img class="alignnone size-full wp-image-6194" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.18.26-AM.png" alt="" width="1308" height="378" />
+<br><br>
+Click next.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A12.</strong> Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6195" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.19.38-AM.png" alt="" width="1335" height="737" />
+<br><br>
+Scroll down and click next.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A13.</strong> Acknowledge that it will create resources then click update stack.
+<br><br>
+<img class="alignnone size-full wp-image-6196" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.20.57-AM.png" alt="" width="1036" height="257" />
+
+&nbsp;
+<br><br><br><br><br>
+<strong>A14.</strong> Once the update stack is complete, you should see that the username is now included in the output.
+<br><br>
+<img class="alignnone size-full wp-image-6197" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-8.25.49-AM.png" alt="" width="1423" height="519" />
+<br><br>
+Your updated S3 CloudFormation template can now be uploaded in the public S3 bucket.
+
+
+<br><br><br><br><br>
+<h2><strong>B. EC2 Stack.</strong></h2>
+<br>
+<strong>B1.</strong> Make sure you are in the Singapore region.
+
+&nbsp;
+<br><br><br>
+<strong>B2.</strong> Navigate to CloudFormation console.
+
+&nbsp;
+<br><br><br>
+<strong>B3.</strong> Click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6186" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.47.47-AM.png" alt="" width="1403" height="223" />
+
+
+<br><br><br><br><br>
+<strong>B4.</strong> Use this URL <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/EC2_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/EC2_CFN.json</a>  as the template URL.
+<br><br>
+<img class="alignnone size-full wp-image-6200" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-11.06.10-AM.png" alt="" width="1300" height="702" />
+<br><br>
+Click next.
+
+&nbsp;
+
+&nbsp;
+<br><br><br><br><br>
+<strong>B5.</strong> Set the name to EC2-STACK.
+<br><br>
+<img class="alignnone size-full wp-image-6201" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-11.07.56-AM.png" alt="" width="1303" height="704" />
+<br><br>
+Click next.
+<br><br><br><br><br>
+<strong>B6.</strong> Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6202" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-11.08.32-AM.png" alt="" width="1314" height="710" />
+<br><br>
+Scroll down and click next.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>B7.</strong> On the review step, keep it as is. Scroll down and then click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6203" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-11.10.11-AM.png" alt="" width="1021" height="404" />
+
+&nbsp;
+<br><br><br><br><br>
+<strong>B8.</strong> Once the stack creation is complete, click on the outputs tab, and it will show you the InstanceIPAddress and InstanceId.
+<br><br>
+<img class="alignnone size-full wp-image-6205" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.30.50-PM.png" alt="" width="1166" height="482" />
+
+<br><br><br><br><br>
+<strong>B9.</strong> Here comes the work, you need to add the InstanceType of the EC2 instance in the output, you can do this by opening the EC2 CloudFormation template URL in your web browser, copy the text and then paste it into a file in your local machine and save it with a .json file extension.
+
+Then you need to modify the output section of the CloudFormation template.
+
+After you have made the modification, you can test it by clicking on the update button, which is located at the top of the EC2-STACK you have created.
+
+&nbsp;
+
+<img class="alignnone size-full wp-image-6207" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.41.16-PM.png" alt="" width="1425" height="197" />
+<br><br><br><br><br>
+<strong>B10.</strong> In the prerequisite select "replace current template", then select "upload a template file" for the template resource, click choose file and upload the CloudFormation template from your local machine.
+
+<img class="alignnone size-full wp-image-6208" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.48.58-PM.png" alt="" width="1304" height="717" />
+<br>
+Click next.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>B11.</strong> Leave the parameters as is.
+
+<img class="alignnone size-full wp-image-6209" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.49.54-PM.png" alt="" width="1327" height="533" />
+<br>
+Click next.
+<br><br><br><br><br>
+B12. Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6210" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.50.57-PM.png" alt="" width="1321" height="722" />
+<br><br>
+Scroll down and click next.
+
+&nbsp;
+<br><br><br><br>
+<strong>B13.</strong> Scroll down and click on update stack.
+<br><br>
+<img class="alignnone size-full wp-image-6211" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.52.37-PM.png" alt="" width="1043" height="335" />
+<br><br>
+&nbsp;
+<br><br><br><br><br>
+<strong>B14.</strong> Once the update stack is complete, it should show the InstanceType in the outputs.
+<br><br>
+<img class="alignnone size-full wp-image-6212" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.53.35-PM.png" alt="" width="1417" height="523" />
+<br><br>
+Your updated EC2 CloudFormation template can now be uploaded in the public s3 bucket.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>B15.</strong> You can now delete the EC2-STACK by clicking on delete.
+<br><br>
+<img class="alignnone size-full wp-image-6213" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.56.22-PM.png" alt="" width="1166" height="306" />
+<br><br><br>
+Then click on delete stack.
+<br><br><br>
+<img class="alignnone size-full wp-image-6214" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-2.56.52-PM.png" alt="" width="615" height="199" />
+<br><br>
+EC2-STACK will be deleted after a few seconds.
+
+
+<br><br><br><br><br>
+<h2><strong>C.S3 Stack.</strong></h2>
+<strong>C1.</strong> Make sure you are in the Singapore region.
+<br><br>
+<strong>C2</strong>. Navigate to CloudFormation console.
+<br><br>
+<strong>C3.</strong> Click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6186" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.47.47-AM.png" alt="" width="1403" height="223" />
+
+
+<br><br><br><br>
+<strong>C4.</strong>Use this URL <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/S3_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/S3_CFN.json</a> as the template URL.
+<br><br>
+<img class="alignnone size-full wp-image-6216" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.15.53-PM.png" alt="" width="1311" height="704" />
+<br><br>
+Click next.
+
+&nbsp;
+<br><br><br><br><br>
+<strong>C5.</strong>Set the name to S3-STACK.
+<br><br>
+<img class="alignnone size-full wp-image-6217" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.18.18-PM.png" alt="" width="1308" height="527" />
+<br><br>
+Click next.
+
+
+<br><br><br><br><br>
+<strong>C6.</strong> Leave the configure stack option as is.
+
+<img class="alignnone size-full wp-image-6218" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.19.10-PM.png" alt="" width="1306" height="688" />
+<br><br>
+Scroll down and click next.
+<br><br><br><br><br>
+<strong>C7.</strong> On the review step, keep it as is. Scroll down and then click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6219" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.20.32-PM.png" alt="" width="1032" height="407" />
+
+&nbsp;
+<br><br><br><br><br>
+C8. Once the stack creation is complete, click on the outputs tab, it will show the S3BucketSecureURL and WebsiteURL.
+<br><br>
+<img class="alignnone size-full wp-image-6220" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.22.23-PM.png" alt="" width="1421" height="517" />
+
+<br><br><br><br><br>
+<strong>C9.</strong> Here comes the work, you need to add the S3BucketName in the output, you can do this by opening the S3 CloudFormation template URL in your web browser, copy the text and paste it into a text editor in your local machine and save it using a .json file extension.
+<br><br>
+Then you need to modify the output section of the CloudFormation template to add the S3BucketName in the outputs.
+<br><br>
+After you have modified the CloudFormation template, you can test it by clicking on the update button which is located at the top of the S3-STACK you have created.
+<br><br>
+<img class="alignnone size-full wp-image-6221" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.37.53-PM.png" alt="" width="1172" height="170" />
+
+
+<br><br><br><br><br><br>
+<strong>C10.</strong>In the prerequisite select "replace current template", then select "upload a template file" for the template resource, click choose file and upload the CloudFormation template from your local machine
+<br><br>
+<img class="alignnone size-full wp-image-6222" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.44.50-PM.png" alt="" width="1309" height="712" />
+<br><br>
+Click next.
+
+<br><br><br><br><br>
+<strong>C11.</strong>Leave the parameters as is.
+
+<img class="alignnone size-full wp-image-6223" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.45.36-PM.png" alt="" width="1299" height="323" />
+<br><br>
+Click next.
+
+<br><br><br><br><br>
+<strong>C12.</strong>Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6224" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.46.53-PM.png" alt="" width="1298" height="716" />
+<br><br>
+Scroll down and click next.
+
+
+<br><br><br><br><br>
+<strong>C13.</strong> Scroll down and click on update stack.
+<br><br>
+<img class="alignnone size-full wp-image-6225" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.48.09-PM.png" alt="" width="1026" height="329" />
+<br>
+
+<br><br><br><br><br>
+<strong>C14.</strong>Once the update stack is complete, it should show the S3BucketName in the outputs.
+<br><br>
+<img class="alignnone size-full wp-image-6227" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-3.50.59-PM.png" alt="" width="1169" height="546" />
+<br><br>
+Your updated S3 CloudFormation template can now be uploaded in the public s3 bucket.
+
+<br><br><br><br><br>
+<strong>C15.</strong> You can now delete the S3-STACK by clicking on delete.
+<br><br>
+<img class="alignnone size-full wp-image-6229" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-4.08.51-PM.png" alt="" width="1173" height="234" />
+<br><br>
+Then click on delete stack.
+<br><br>
+<img class="alignnone size-full wp-image-6230" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-4.09.34-PM.png" alt="" width="604" height="199" />
+<br><br>
+S3-STACK will be deleted after a few seconds.
+
+
+<br><br><br><br><br>
+<H2><strong>D. DynamoDB Stack.</strong></H2>
+<br><br><br>
+<strong>D1.</strong> Make sure you are in the Singapore region.
+<br><br><br>
+<strong>D2.</strong> Navigate to CloudFormation console.
+<br><br><br>
+<strong>D3.</strong> Click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6186" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-7.47.47-AM.png" alt="" width="1403" height="223" />
+<br>
+
+<br><br><br><br><br>
+<strong>D4.</strong>Use this URL <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/DYNAMODB_CFN.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/DYNAMODB_CFN.json</a> as the template URL.
+<br><br>
+<img class="alignnone size-full wp-image-6233" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.33.11-PM.png" alt="" width="1292" height="698" />
+<br><br>
+Click next.
+<br>
+
+<br><br><br><br><br>
+<strong>D5.</strong>Set the name to DynamoDB-STACK and leave the parameters as is.
+
+
+<br><br>
+<img class="alignnone size-full wp-image-6234" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.37.11-PM.png" alt="" width="1306" height="738" />
+<br><br>
+Click next.
+
+
+<br><br><br><br><br>
+<strong>D6.</strong>Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6235" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.38.51-PM.png" alt="" width="1312" height="723" />
+<br><br>
+Scroll down and click next.
+<br><br>
+
+<br><br><br><br><br>
+<strong>D7.</strong>On the review step, keep it as is. Scroll down and then click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6236" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.39.54-PM.png" alt="" width="1016" height="414" />
+<br>
+
+<br><br><br><br><br>
+<strong>D8.</strong>Once the stack creation is complete, click on the outputs tab, it will show the TableName.
+<br><br>
+<img class="alignnone size-full wp-image-6237" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.44.32-PM.png" alt="" width="1425" height="478" />
+<br>
+
+<br><br><br><br><br>
+<strong>D9.</strong>Here comes the work, you need to add the PrimaryKey in the output, you can do this by opening the DynamoDB CloudFormation template URL in your web browser, copy the text and paste it into a text editor in your local machine and save it using a .json file extension.
+<br><br>
+Then you need to modify the output section of the CloudFormation template to add the PrimaryKey in the outputs.
+<br><br>
+After you have modified the CloudFormation template, you can test it by clicking on the update button which is located at the top of the DynamoDB-STACK you have created.
+<br><br>
+
+
+<img class="alignnone size-full wp-image-6238" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.51.04-PM.png" alt="" width="1387" height="171" />
+<br>
+
+
+<br><br><br><br><br>
+<strong>D10.</strong> In the prerequisite, select "replace current template", then select "upload a template file" for the template resource, click choose file and upload the CloudFormation template from your local machine.
+<br><br>
+&nbsp;
+
+<img class="alignnone size-full wp-image-6239" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.55.22-PM.png" alt="" width="1303" height="720" />
+<br><br>
+Click next.
+<br>
+
+<br><br><br><br><br>
+<strong>D11.</strong>Leave the parameters as is.
+<br><br>
+<img class="alignnone size-full wp-image-6240" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.57.15-PM.png" alt="" width="1314" height="621" />
+<br><br>
+Click next.
+
+
+<br><br><br><br><br>
+<strong>D12.</strong>Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6241" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.58.17-PM.png" alt="" width="1319" height="714" />
+<br><br>
+Scroll down and click next.
+<br>
+
+<br><br><br><br><br>
+<strong>D13.</strong> Scroll down and click on update stack.
+<br><br>
+<img class="alignnone size-full wp-image-6242" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-5.59.20-PM.png" alt="" width="1030" height="331" />
+<br>
+
+<br><br><br><br><br>
+<strong>D14.</strong>Once the update stack is complete, it should show the PrimaryKey in the outputs.
+<br><br>
+
+
+<img class="alignnone size-full wp-image-6243" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.00.57-PM.png" alt="" width="1419" height="522" />
+<br><br>
+Your updated DynamoDB CloudFormation template can now be uploaded in the public s3 bucket.
+<br>
+
+<br><br><br><br><br>
+<strong>D15. </strong>You can now delete the DynamoDB-Stack by clicking on delete.
+<br><br>
+<img class="alignnone size-full wp-image-6244" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.03.23-PM.png" alt="" width="1168" height="328" />
+<br><br>
+Then click on delete stack.
+<br><br>
+<img class="alignnone size-full wp-image-6245" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.04.09-PM.png" alt="" width="604" height="192" />
+<br><br>
+DynamoDB-Stack will be deleted after a few seconds.
+<br>
+
+<br><br><br><br><br>
+<h2><strong>E. Nested Stack.</strong></h2>
+<strong>E1.</strong>Open this URL on your web browser: <a href="https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/NESTED_STACK.json">https://apper-demo.s3-ap-southeast-1.amazonaws.com/cf-templates-lab-5/NESTED_STACK.json</a> then copy it to a text file and save it using .json file extension.
+
+
+<br><br><br>
+<strong>E2.</strong>You need to update the TemplateURL in the CloudFormation stack. Get the template URLs from the public S3 bucket that your group has created.
+
+<br><br><br>
+<strong>E3.</strong>You will also need to update the output section of the CloudFormation template to display AccessKey, BucketName, DynamoPartition, IAMUser and InstanceId, similar to the image below.
+<br><br>
+<img class="alignnone size-full wp-image-6248" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.21.21-PM.png" alt="" width="1418" height="733" />
+<br>
+
+<br><br><br>
+<strong>E4.</strong>After updating the CloudFormation template, Make sure you are in the Singapore region.
+<br>
+&nbsp;
+<br><br><br>
+<strong>E5.</strong> Navigate to CloudFormation console.
+
+&nbsp;
+<br><br><br><br>
+<strong>E6. </strong>Click on create stack.
+<br><br>
+<img class="alignnone size-full wp-image-6249" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.25.35-PM.png" alt="" width="1392" height="304" />
+<br>
+
+<br><br><br><br><br>
+<strong>E7.</strong>On prepare template, select "Template is ready", and select "Upload a template file" for the template source.
+<br><br>
+Then upload your updated CloudFormation stack from your local machine.
+<br><br>
+<img class="alignnone size-full wp-image-6251" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.30.31-PM.png" alt="" width="1300" height="722" />
+<br><br>
+Click next.
+<br>
+
+
+<br><br><br><br><br>
+<strong>E8.</strong>Enter Nested-Stack for the stack name and leave the parameters as is.
+<br><br>
+<img class="alignnone size-full wp-image-6252" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.31.20-PM.png" alt="" width="1308" height="536" />
+<br>
+
+<br><br><br><br><br>
+<strong>E9.</strong>Leave the configure stack options as is.
+<br><br>
+<img class="alignnone size-full wp-image-6253" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.32.25-PM.png" alt="" width="1311" height="707" />
+<br><br>
+Scroll down and click next.
+
+
+<br><br><br><br><br>
+<strong>E10.</strong>Check both checkboxes in the capabilites section.
+<br><br>
+<img class="alignnone size-full wp-image-6254" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.33.53-PM.png" alt="" width="1029" height="378" />
+<br><br>
+Click on create stack.
+<br>
+
+<br><br><br><br><br>
+<strong>E11.</strong> Once the stack creation is complete, go to the outputs tab and it should display the outputs similar with the image below.
+<br><br>
+<img class="alignnone size-full wp-image-6255" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.36.35-PM.png" alt="" width="1177" height="653" />
+<br>
+
+<br><br><br><br><br>
+<strong>E12.</strong>Go to the Stack info tab and get the stack id, we will ask for this ID at the end of the lab.
+<br><br>
+
+<img class="alignnone size-full wp-image-6256" src="https://mentor.apper.ph/wp-content/uploads/2019/10/Screen-Shot-2019-10-23-at-6.39.41-PM.png" alt="" width="1160" height="345" />
+<br><br>
+
+<strong>E13.</strong> Delete the Nested-Stack.
+</html>
